@@ -1,6 +1,5 @@
-###Train Ticket Reservation
+Train Ticket Reservation
 ========================
-
 This application is made for a train ticket reservation [ VB.net + SQL Server ]
 PROJECT TITLE : Train Ticket Reservation
 <br/>PURPOSE OF PROJECT : Finall Project PBD (Database Programming)
