@@ -23,14 +23,14 @@ Partial Class Data_Pemesan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
@@ -52,41 +52,26 @@ Partial Class Data_Pemesan
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'TextBox3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(120, 50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID Pemesan :"
+        Me.TextBox3.Location = New System.Drawing.Point(281, 155)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(142, 20)
+        Me.TextBox3.TabIndex = 7
         '
-        'Label2
+        'TextBox2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(120, 84)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nama Pemesan :"
+        Me.TextBox2.Location = New System.Drawing.Point(281, 117)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(211, 20)
+        Me.TextBox2.TabIndex = 6
         '
-        'Label3
+        'TextBox1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(122, 120)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Alamat :"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(122, 158)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "No. Telp :"
+        Me.TextBox1.Location = New System.Drawing.Point(281, 76)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(150, 20)
+        Me.TextBox1.TabIndex = 5
         '
         'Label5
         '
@@ -97,26 +82,41 @@ Partial Class Data_Pemesan
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "001"
         '
-        'TextBox1
+        'Label4
         '
-        Me.TextBox1.Location = New System.Drawing.Point(281, 76)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(150, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(122, 158)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "No. Telp :"
         '
-        'TextBox2
+        'Label3
         '
-        Me.TextBox2.Location = New System.Drawing.Point(281, 117)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(211, 20)
-        Me.TextBox2.TabIndex = 6
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(122, 120)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Alamat :"
         '
-        'TextBox3
+        'Label2
         '
-        Me.TextBox3.Location = New System.Drawing.Point(281, 155)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(142, 20)
-        Me.TextBox3.TabIndex = 7
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(120, 84)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(88, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nama Pemesan :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(120, 50)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ID Pemesan :"
         '
         'Button1
         '

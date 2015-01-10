@@ -46,15 +46,15 @@ Partial Class tmbh_user
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(57, 42)
+        Me.GroupBox1.Location = New System.Drawing.Point(38, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(539, 221)
+        Me.GroupBox1.Size = New System.Drawing.Size(336, 221)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'txt_password
         '
-        Me.txt_password.Location = New System.Drawing.Point(259, 115)
+        Me.txt_password.Location = New System.Drawing.Point(127, 116)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_password.Size = New System.Drawing.Size(120, 20)
@@ -63,7 +63,7 @@ Partial Class tmbh_user
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(167, 37)
+        Me.Label2.Location = New System.Drawing.Point(35, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(35, 13)
         Me.Label2.TabIndex = 8
@@ -76,21 +76,21 @@ Partial Class tmbh_user
         Me.cbo_akses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_akses.FormattingEnabled = True
         Me.cbo_akses.Items.AddRange(New Object() {"Administrator", "Kasir"})
-        Me.cbo_akses.Location = New System.Drawing.Point(258, 154)
+        Me.cbo_akses.Location = New System.Drawing.Point(126, 155)
         Me.cbo_akses.Name = "cbo_akses"
         Me.cbo_akses.Size = New System.Drawing.Size(121, 21)
         Me.cbo_akses.TabIndex = 8
         '
         'txt_username
         '
-        Me.txt_username.Location = New System.Drawing.Point(258, 75)
+        Me.txt_username.Location = New System.Drawing.Point(126, 76)
         Me.txt_username.Name = "txt_username"
         Me.txt_username.Size = New System.Drawing.Size(121, 20)
         Me.txt_username.TabIndex = 6
         '
         'txt_nama
         '
-        Me.txt_nama.Location = New System.Drawing.Point(259, 37)
+        Me.txt_nama.Location = New System.Drawing.Point(127, 38)
         Me.txt_nama.Name = "txt_nama"
         Me.txt_nama.Size = New System.Drawing.Size(170, 20)
         Me.txt_nama.TabIndex = 5
@@ -98,7 +98,7 @@ Partial Class tmbh_user
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(164, 154)
+        Me.Label5.Location = New System.Drawing.Point(32, 155)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 13)
         Me.Label5.TabIndex = 4
@@ -107,7 +107,7 @@ Partial Class tmbh_user
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(164, 115)
+        Me.Label4.Location = New System.Drawing.Point(32, 116)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 3
@@ -116,7 +116,7 @@ Partial Class tmbh_user
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(164, 75)
+        Me.Label3.Location = New System.Drawing.Point(32, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 2
@@ -124,7 +124,7 @@ Partial Class tmbh_user
         '
         'btn_simpan
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(202, 291)
+        Me.btn_simpan.Location = New System.Drawing.Point(91, 264)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(75, 23)
         Me.btn_simpan.TabIndex = 9
@@ -133,7 +133,7 @@ Partial Class tmbh_user
         '
         'btn_batal
         '
-        Me.btn_batal.Location = New System.Drawing.Point(339, 291)
+        Me.btn_batal.Location = New System.Drawing.Point(223, 264)
         Me.btn_batal.Name = "btn_batal"
         Me.btn_batal.Size = New System.Drawing.Size(75, 23)
         Me.btn_batal.TabIndex = 10
@@ -144,7 +144,7 @@ Partial Class tmbh_user
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(650, 376)
+        Me.ClientSize = New System.Drawing.Size(422, 316)
         Me.Controls.Add(Me.btn_batal)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.GroupBox1)

@@ -14,6 +14,7 @@ Public Class tmbh_user
 
     Private Sub tmbh_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btn_simpan.Enabled = False
+        Me.MdiParent = Menu_admin
 
     End Sub
 

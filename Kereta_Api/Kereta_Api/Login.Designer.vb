@@ -23,6 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_username = New System.Windows.Forms.TextBox()
@@ -32,13 +33,15 @@ Partial Class Login
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.label_timer = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(111, 55)
+        Me.Label1.Location = New System.Drawing.Point(135, 116)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 0
@@ -47,7 +50,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(111, 92)
+        Me.Label2.Location = New System.Drawing.Point(135, 153)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 1
@@ -55,14 +58,14 @@ Partial Class Login
         '
         'txt_username
         '
-        Me.txt_username.Location = New System.Drawing.Point(187, 55)
+        Me.txt_username.Location = New System.Drawing.Point(211, 116)
         Me.txt_username.Name = "txt_username"
         Me.txt_username.Size = New System.Drawing.Size(154, 20)
         Me.txt_username.TabIndex = 2
         '
         'txt_pass
         '
-        Me.txt_pass.Location = New System.Drawing.Point(187, 89)
+        Me.txt_pass.Location = New System.Drawing.Point(211, 150)
         Me.txt_pass.Name = "txt_pass"
         Me.txt_pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_pass.Size = New System.Drawing.Size(154, 20)
@@ -70,7 +73,7 @@ Partial Class Login
         '
         'btn_login
         '
-        Me.btn_login.Location = New System.Drawing.Point(114, 167)
+        Me.btn_login.Location = New System.Drawing.Point(168, 228)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(75, 23)
         Me.btn_login.TabIndex = 4
@@ -79,7 +82,7 @@ Partial Class Login
         '
         'bt_batal
         '
-        Me.bt_batal.Location = New System.Drawing.Point(266, 167)
+        Me.bt_batal.Location = New System.Drawing.Point(270, 228)
         Me.bt_batal.Name = "bt_batal"
         Me.bt_batal.Size = New System.Drawing.Size(75, 23)
         Me.bt_batal.TabIndex = 5
@@ -89,9 +92,9 @@ Partial Class Login
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.label_timer})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 224)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 276)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(471, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(532, 22)
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -104,12 +107,22 @@ Partial Class Login
         'Timer1
         '
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(60, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(430, 88)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(471, 246)
+        Me.ClientSize = New System.Drawing.Size(532, 298)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.bt_batal)
         Me.Controls.Add(Me.btn_login)
@@ -123,6 +136,7 @@ Partial Class Login
         Me.Text = ".:: Login ::."
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -136,5 +150,6 @@ Partial Class Login
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents label_timer As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

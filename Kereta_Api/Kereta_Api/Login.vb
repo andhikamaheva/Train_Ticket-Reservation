@@ -10,6 +10,9 @@ Public Class Login
     Public username As String
     Public akses As String
     Public pass As String
+    Public aksesx As String
+
+
 
     Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs) Handles label_timer.Click
 
@@ -45,11 +48,11 @@ Public Class Login
         End While
         username = txt_username.Text
         If username <> "" And pass <> "" And akses = "Administrator" Then
-
+            aksesx = "Dashboard Administrator"
             Menu_admin.Show()
             Me.Hide()
-
         ElseIf username <> "" And pass <> "" And akses = "Kasir" Then
+            aksesx = "Dashboard Kasir"
             Menu_admin.Show()
             Menu_admin.AdministratorToolStripMenuItem.Enabled = False
         Else
@@ -74,11 +77,14 @@ Public Class Login
                 akses = exec(4)
             End While
             If username <> "" And pass <> "" And akses = "Administrator" Then
+                aksesx = "Dashboard Administrator"
                 Menu_admin.Show()
                 Me.Hide()
 
             ElseIf username <> "" And pass <> "" And akses = "Kasir" Then
+                aksesx = "Dashboard Kasir"
                 Menu_admin.Show()
+                Me.Hide()
 
 
                 'Menu_admin.AdministratorToolStripMenuItem.Enabled = False

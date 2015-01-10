@@ -28,6 +28,7 @@ Public Class Ubah_pass
         conn.Close()
         Me.lbl_warning.ForeColor = System.Drawing.Color.Black
         lbl_warning.Text = "Masukkan Password!"
+        Me.MdiParent = Menu_admin
     End Sub
 
     Private Sub txt_pass_TextChanged(sender As Object, e As EventArgs) Handles txt_pass.TextChanged

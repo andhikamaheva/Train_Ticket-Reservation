@@ -52,6 +52,7 @@ Public Class lihat_user
   
 
     Private Sub lihat_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MdiParent = Menu_admin
         conn.Open()
         query = "select id, nama, username, hak_akses from admin"
         comm = New SqlCommand(query, conn)

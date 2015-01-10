@@ -30,6 +30,7 @@ Public Class ubah_data
         txt_username.Text = username
         cbo_akses.Text = hak
         btn_simpan.Enabled = False
+        Me.MdiParent = Menu_admin
     End Sub
 
     Private Sub btn_batal_Click(sender As Object, e As EventArgs) Handles btn_batal.Click

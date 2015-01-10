@@ -23,15 +23,15 @@ Partial Class Cari_Jadwal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,68 +54,14 @@ Partial Class Cari_Jadwal
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Kota Asal :"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(291, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Stasiun Asal :"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(46, 79)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Kota Tujuan :"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(291, 79)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Stasiun Tujuan :"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(123, 20)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 4
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(381, 17)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 5
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(123, 76)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 6
+        Me.Button1.Location = New System.Drawing.Point(231, 121)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(81, 38)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Cari"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox4
         '
@@ -126,14 +72,68 @@ Partial Class Cari_Jadwal
         Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox4.TabIndex = 7
         '
-        'Button1
+        'ComboBox3
         '
-        Me.Button1.Location = New System.Drawing.Point(231, 121)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(81, 38)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Cari"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(123, 76)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox3.TabIndex = 6
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(381, 17)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 5
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(123, 20)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(291, 79)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(84, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Stasiun Tujuan :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(46, 79)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(71, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Kota Tujuan :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(291, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(71, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Stasiun Asal :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(46, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Kota Asal :"
         '
         'DataGridView1
         '
