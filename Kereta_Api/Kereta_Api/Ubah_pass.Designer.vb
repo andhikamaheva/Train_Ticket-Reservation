@@ -23,21 +23,21 @@ Partial Class Ubah_pass
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lbl_id = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbl_username = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lbl_hakakses = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txt_pass = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lbl_warning = New System.Windows.Forms.Label()
+        Me.lbl_nama = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_pass2 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txt_pass = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lbl_hakakses = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lbl_username = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbl_id = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_simpan = New System.Windows.Forms.Button()
         Me.btn_batal = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbl_nama = New System.Windows.Forms.Label()
-        Me.lbl_warning = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,153 +56,154 @@ Partial Class Ubah_pass
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.lbl_id)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(48, 32)
+        Me.GroupBox1.Location = New System.Drawing.Point(27, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(464, 252)
+        Me.GroupBox1.Size = New System.Drawing.Size(347, 252)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(116, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID"
-        '
-        'lbl_id
-        '
-        Me.lbl_id.AutoSize = True
-        Me.lbl_id.Location = New System.Drawing.Point(255, 16)
-        Me.lbl_id.Name = "lbl_id"
-        Me.lbl_id.Size = New System.Drawing.Size(10, 13)
-        Me.lbl_id.TabIndex = 1
-        Me.lbl_id.Text = "-"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(116, 81)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Username"
-        '
-        'lbl_username
-        '
-        Me.lbl_username.AutoSize = True
-        Me.lbl_username.Location = New System.Drawing.Point(255, 81)
-        Me.lbl_username.Name = "lbl_username"
-        Me.lbl_username.Size = New System.Drawing.Size(10, 13)
-        Me.lbl_username.TabIndex = 3
-        Me.lbl_username.Text = "-"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(116, 112)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Hak Akses"
-        '
-        'lbl_hakakses
-        '
-        Me.lbl_hakakses.AutoSize = True
-        Me.lbl_hakakses.Location = New System.Drawing.Point(255, 112)
-        Me.lbl_hakakses.Name = "lbl_hakakses"
-        Me.lbl_hakakses.Size = New System.Drawing.Size(10, 13)
-        Me.lbl_hakakses.TabIndex = 5
-        Me.lbl_hakakses.Text = "-"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(116, 151)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(53, 13)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Password"
-        '
-        'txt_pass
-        '
-        Me.txt_pass.Location = New System.Drawing.Point(258, 144)
-        Me.txt_pass.Name = "txt_pass"
-        Me.txt_pass.Size = New System.Drawing.Size(132, 20)
-        Me.txt_pass.TabIndex = 7
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(116, 190)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(91, 13)
-        Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Konfirm Password"
-        '
-        'txt_pass2
-        '
-        Me.txt_pass2.Location = New System.Drawing.Point(258, 183)
-        Me.txt_pass2.Name = "txt_pass2"
-        Me.txt_pass2.Size = New System.Drawing.Size(132, 20)
-        Me.txt_pass2.TabIndex = 9
-        '
-        'btn_simpan
-        '
-        Me.btn_simpan.Location = New System.Drawing.Point(167, 300)
-        Me.btn_simpan.Name = "btn_simpan"
-        Me.btn_simpan.Size = New System.Drawing.Size(75, 23)
-        Me.btn_simpan.TabIndex = 1
-        Me.btn_simpan.Text = "Simpan"
-        Me.btn_simpan.UseVisualStyleBackColor = True
-        '
-        'btn_batal
-        '
-        Me.btn_batal.Location = New System.Drawing.Point(306, 299)
-        Me.btn_batal.Name = "btn_batal"
-        Me.btn_batal.Size = New System.Drawing.Size(75, 23)
-        Me.btn_batal.TabIndex = 2
-        Me.btn_batal.Text = "Batal"
-        Me.btn_batal.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(116, 45)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Nama"
-        '
-        'lbl_nama
-        '
-        Me.lbl_nama.AutoSize = True
-        Me.lbl_nama.Location = New System.Drawing.Point(255, 45)
-        Me.lbl_nama.Name = "lbl_nama"
-        Me.lbl_nama.Size = New System.Drawing.Size(10, 13)
-        Me.lbl_nama.TabIndex = 11
-        Me.lbl_nama.Text = "-"
         '
         'lbl_warning
         '
         Me.lbl_warning.AutoSize = True
         Me.lbl_warning.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_warning.ForeColor = System.Drawing.Color.Red
-        Me.lbl_warning.Location = New System.Drawing.Point(211, 226)
+        Me.lbl_warning.Location = New System.Drawing.Point(131, 226)
         Me.lbl_warning.Name = "lbl_warning"
         Me.lbl_warning.Size = New System.Drawing.Size(45, 13)
         Me.lbl_warning.TabIndex = 12
         Me.lbl_warning.Text = "Label4"
         '
+        'lbl_nama
+        '
+        Me.lbl_nama.AutoSize = True
+        Me.lbl_nama.Location = New System.Drawing.Point(175, 45)
+        Me.lbl_nama.Name = "lbl_nama"
+        Me.lbl_nama.Size = New System.Drawing.Size(10, 13)
+        Me.lbl_nama.TabIndex = 11
+        Me.lbl_nama.Text = "-"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(36, 45)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Nama"
+        '
+        'txt_pass2
+        '
+        Me.txt_pass2.Location = New System.Drawing.Point(178, 183)
+        Me.txt_pass2.Name = "txt_pass2"
+        Me.txt_pass2.Size = New System.Drawing.Size(132, 20)
+        Me.txt_pass2.TabIndex = 9
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(36, 190)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 13)
+        Me.Label8.TabIndex = 8
+        Me.Label8.Text = "Konfirm Password"
+        '
+        'txt_pass
+        '
+        Me.txt_pass.Location = New System.Drawing.Point(178, 144)
+        Me.txt_pass.Name = "txt_pass"
+        Me.txt_pass.Size = New System.Drawing.Size(132, 20)
+        Me.txt_pass.TabIndex = 7
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(36, 151)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(53, 13)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Password"
+        '
+        'lbl_hakakses
+        '
+        Me.lbl_hakakses.AutoSize = True
+        Me.lbl_hakakses.Location = New System.Drawing.Point(175, 112)
+        Me.lbl_hakakses.Name = "lbl_hakakses"
+        Me.lbl_hakakses.Size = New System.Drawing.Size(10, 13)
+        Me.lbl_hakakses.TabIndex = 5
+        Me.lbl_hakakses.Text = "-"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(36, 112)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(59, 13)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Hak Akses"
+        '
+        'lbl_username
+        '
+        Me.lbl_username.AutoSize = True
+        Me.lbl_username.Location = New System.Drawing.Point(175, 81)
+        Me.lbl_username.Name = "lbl_username"
+        Me.lbl_username.Size = New System.Drawing.Size(10, 13)
+        Me.lbl_username.TabIndex = 3
+        Me.lbl_username.Text = "-"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(36, 81)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Username"
+        '
+        'lbl_id
+        '
+        Me.lbl_id.AutoSize = True
+        Me.lbl_id.Location = New System.Drawing.Point(175, 16)
+        Me.lbl_id.Name = "lbl_id"
+        Me.lbl_id.Size = New System.Drawing.Size(10, 13)
+        Me.lbl_id.TabIndex = 1
+        Me.lbl_id.Text = "-"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(36, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ID"
+        '
+        'btn_simpan
+        '
+        Me.btn_simpan.Location = New System.Drawing.Point(66, 295)
+        Me.btn_simpan.Name = "btn_simpan"
+        Me.btn_simpan.Size = New System.Drawing.Size(88, 31)
+        Me.btn_simpan.TabIndex = 1
+        Me.btn_simpan.Text = "Simpan"
+        Me.btn_simpan.UseVisualStyleBackColor = True
+        '
+        'btn_batal
+        '
+        Me.btn_batal.Location = New System.Drawing.Point(219, 295)
+        Me.btn_batal.Name = "btn_batal"
+        Me.btn_batal.Size = New System.Drawing.Size(85, 31)
+        Me.btn_batal.TabIndex = 2
+        Me.btn_batal.Text = "Batal"
+        Me.btn_batal.UseVisualStyleBackColor = True
+        '
         'Ubah_pass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(550, 350)
+        Me.ClientSize = New System.Drawing.Size(406, 350)
         Me.Controls.Add(Me.btn_batal)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MaximizeBox = False
         Me.Name = "Ubah_pass"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ubah Password"

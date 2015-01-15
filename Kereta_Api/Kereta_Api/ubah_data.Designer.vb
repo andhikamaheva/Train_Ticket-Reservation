@@ -23,6 +23,7 @@ Partial Class ubah_data
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txt_warning = New System.Windows.Forms.Label()
         Me.txt_pass1 = New System.Windows.Forms.TextBox()
         Me.txt_pass = New System.Windows.Forms.TextBox()
         Me.cbo_akses = New System.Windows.Forms.ComboBox()
@@ -37,7 +38,6 @@ Partial Class ubah_data
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_simpan = New System.Windows.Forms.Button()
         Me.btn_batal = New System.Windows.Forms.Button()
-        Me.txt_warning = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,6 +61,16 @@ Partial Class ubah_data
         Me.GroupBox1.Size = New System.Drawing.Size(443, 253)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'txt_warning
+        '
+        Me.txt_warning.AutoSize = True
+        Me.txt_warning.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_warning.Location = New System.Drawing.Point(186, 224)
+        Me.txt_warning.Name = "txt_warning"
+        Me.txt_warning.Size = New System.Drawing.Size(123, 13)
+        Me.txt_warning.TabIndex = 24
+        Me.txt_warning.Text = "Masukkan Password"
         '
         'txt_pass1
         '
@@ -181,16 +191,6 @@ Partial Class ubah_data
         Me.btn_batal.Text = "Batal"
         Me.btn_batal.UseVisualStyleBackColor = True
         '
-        'txt_warning
-        '
-        Me.txt_warning.AutoSize = True
-        Me.txt_warning.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_warning.Location = New System.Drawing.Point(186, 224)
-        Me.txt_warning.Name = "txt_warning"
-        Me.txt_warning.Size = New System.Drawing.Size(123, 13)
-        Me.txt_warning.TabIndex = 24
-        Me.txt_warning.Text = "Masukkan Password"
-        '
         'ubah_data
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -199,6 +199,7 @@ Partial Class ubah_data
         Me.Controls.Add(Me.btn_batal)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MaximizeBox = False
         Me.Name = "ubah_data"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Update User"

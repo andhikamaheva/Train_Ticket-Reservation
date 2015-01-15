@@ -7,13 +7,7 @@ Public Class ubah_data
     Public username As String
     Public hak As String
 
-    Dim connStr As String = "server=ROOT;database=K_API;integrated security = true; MultipleActiveResultSets=true"
-    Dim conn As New SqlConnection(connStr)
-    Dim comm As SqlCommand
-    Dim exec As SqlDataReader
-    Dim query As String
-    Dim adapter As SqlDataAdapter
-    Dim dt As DataTable
+  
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
@@ -24,6 +18,7 @@ Public Class ubah_data
     End Sub
 
     Private Sub ubah_data_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi()
         txt_username.Enabled = False
         lbl_id.Text = id
         txt_nama.Text = nama
@@ -57,7 +52,7 @@ Public Class ubah_data
 
     Private Sub btn_simpan_Click(sender As Object, e As EventArgs) Handles btn_simpan.Click
         conn.Open()
-        query = "update admin set nama = '" & txt_nama.Text & "',hak_akses='" & cbo_akses.Text & "',pass ='" & txt_pass1.Text & "' where id =" & lbl_id.Text
+        query = "update ADMIN set nama_admin = '" & txt_nama.Text & "',hak_akses='" & cbo_akses.Text & "',password ='" & txt_pass1.Text & "' where id_admin =" & lbl_id.Text
         comm = New SqlCommand(query, conn)
         comm.ExecuteNonQuery()
         MsgBox("Data Berhasil diupdate!", MsgBoxStyle.OkOnly And MsgBoxStyle.Information, "Success!")

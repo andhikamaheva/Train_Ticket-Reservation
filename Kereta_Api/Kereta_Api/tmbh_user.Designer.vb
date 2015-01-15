@@ -148,7 +148,10 @@ Partial Class tmbh_user
         Me.Controls.Add(Me.btn_batal)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "tmbh_user"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah User"
         Me.GroupBox1.ResumeLayout(False)

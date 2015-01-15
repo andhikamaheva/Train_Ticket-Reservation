@@ -75,6 +75,7 @@ Partial Class lihat_user
         Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.txt_cari)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "lihat_user"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lihat User"

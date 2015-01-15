@@ -41,7 +41,7 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(135, 116)
+        Me.Label1.Location = New System.Drawing.Point(139, 127)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 0
@@ -50,7 +50,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(135, 153)
+        Me.Label2.Location = New System.Drawing.Point(139, 164)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 1
@@ -58,14 +58,14 @@ Partial Class Login
         '
         'txt_username
         '
-        Me.txt_username.Location = New System.Drawing.Point(211, 116)
+        Me.txt_username.Location = New System.Drawing.Point(215, 127)
         Me.txt_username.Name = "txt_username"
         Me.txt_username.Size = New System.Drawing.Size(154, 20)
         Me.txt_username.TabIndex = 2
         '
         'txt_pass
         '
-        Me.txt_pass.Location = New System.Drawing.Point(211, 150)
+        Me.txt_pass.Location = New System.Drawing.Point(215, 161)
         Me.txt_pass.Name = "txt_pass"
         Me.txt_pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_pass.Size = New System.Drawing.Size(154, 20)
@@ -73,18 +73,18 @@ Partial Class Login
         '
         'btn_login
         '
-        Me.btn_login.Location = New System.Drawing.Point(168, 228)
+        Me.btn_login.Location = New System.Drawing.Point(183, 219)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(75, 23)
+        Me.btn_login.Size = New System.Drawing.Size(75, 33)
         Me.btn_login.TabIndex = 4
         Me.btn_login.Text = "Login"
         Me.btn_login.UseVisualStyleBackColor = True
         '
         'bt_batal
         '
-        Me.bt_batal.Location = New System.Drawing.Point(270, 228)
+        Me.bt_batal.Location = New System.Drawing.Point(285, 219)
         Me.bt_batal.Name = "bt_batal"
-        Me.bt_batal.Size = New System.Drawing.Size(75, 23)
+        Me.bt_batal.Size = New System.Drawing.Size(75, 33)
         Me.bt_batal.TabIndex = 5
         Me.bt_batal.Text = "Batal"
         Me.bt_batal.UseVisualStyleBackColor = True

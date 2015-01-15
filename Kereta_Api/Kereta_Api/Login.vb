@@ -2,10 +2,10 @@
 Imports System.Data.SqlClient
 
 Public Class Login
-    Dim connStr As String = "server=ROOT;database=K_API;integrated security = true; MultipleActiveResultSets=true"
-    Dim conn As New SqlConnection(connStr)
-    Dim comm As SqlCommand
-    Dim exec As SqlDataReader
+    'Dim connStr As String = "server=ROOT;database=K_API;integrated security = true; MultipleActiveResultSets=true"
+    'Dim conn As New SqlConnection(connStr)
+    'Dim comm As SqlCommand
+    'Dim exec As SqlDataReader
     Dim query As String
     Public username As String
     Public akses As String
@@ -27,6 +27,8 @@ Public Class Login
         Me.Timer1.Enabled = True
         txt_username.Text = ""
         txt_pass.Text = ""
+        Call koneksi()
+
     End Sub
 
     Private Sub bt_batal_Click(sender As Object, e As EventArgs) Handles bt_batal.Click
@@ -35,11 +37,8 @@ Public Class Login
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         conn.Open()
-        query = "select * from ADMIN where username = '" & txt_username.Text & "' and pass = '" & txt_pass.Text & "'"
+        query = "select * from ADMIN where username = '" & txt_username.Text & "' and password = '" & txt_pass.Text & "'"
         comm = New SqlCommand(query, conn)
-
-
-
         exec = comm.ExecuteReader()
         While exec.Read
             username = exec(2)
@@ -54,7 +53,10 @@ Public Class Login
         ElseIf username <> "" And pass <> "" And akses = "Kasir" Then
             aksesx = "Dashboard Kasir"
             Menu_admin.Show()
-            Menu_admin.AdministratorToolStripMenuItem.Enabled = False
+            Menu_admin.dp_manage.Enabled = False
+            Menu_admin.dp_tambah.Enabled = False
+            Menu_admin.MasterKeretaToolStripMenuItem.Enabled = False
+            Menu_admin.ManageJadwalToolStripMenuItem.Enabled = False
         Else
             MsgBox("Username atau password Anda salah!", MsgBoxStyle.OkOnly And MsgBoxStyle.Information, "Login gagal!")
 
@@ -67,7 +69,7 @@ Public Class Login
     Private Sub txt_pass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_pass.KeyPress
         If Asc(e.KeyChar) = 13 Then
             conn.Open()
-            query = "select * from ADMIN where username = '" & txt_username.Text & "' and pass = '" & txt_pass.Text & "'"
+            query = "select * from ADMIN where username = '" & txt_username.Text & "' and password = '" & txt_pass.Text & "'"
             comm = New SqlCommand(query, conn)
 
             exec = comm.ExecuteReader()
@@ -90,9 +92,8 @@ Public Class Login
                 'Menu_admin.AdministratorToolStripMenuItem.Enabled = False
                 Menu_admin.dp_manage.Enabled = False
                 Menu_admin.dp_tambah.Enabled = False
-
-
-
+                Menu_admin.MasterKeretaToolStripMenuItem.Enabled = False
+                Menu_admin.ManageJadwalToolStripMenuItem.Enabled = False
             Else
                 MsgBox("Username atau password Anda salah!", MsgBoxStyle.OkOnly And MsgBoxStyle.Information, "Login gagal!")
 

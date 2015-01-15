@@ -2,19 +2,15 @@
 Imports System.Data.SqlClient
 
 Public Class Ubah_pass
-    Dim connStr As String = "server=ROOT;database=K_API;integrated security = true; MultipleActiveResultSets=true"
-    Dim conn As New SqlConnection(connStr)
-    Dim comm As SqlCommand
-    Dim exec As SqlDataReader
+
     Dim query As String
     Public username As String
 
-    
-
     Private Sub Ubah_pass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi()
         btn_simpan.Enabled = False
         conn.Open()
-        query = "select id, nama, username, hak_akses from admin where username = '" & Login.username & "'"
+        query = "select id_admin, nama_admin, username, hak_akses from admin where username = '" & Login.username & "'"
         comm = New SqlCommand(query, conn)
         exec = comm.ExecuteReader()
         While exec.Read
@@ -60,7 +56,7 @@ Public Class Ubah_pass
 
     Private Sub btn_simpan_Click(sender As Object, e As EventArgs) Handles btn_simpan.Click
         conn.Open()
-        query = "update admin set pass = '" & txt_pass2.Text & "' where id =" & lbl_id.Text
+        query = "update admin set password = '" & txt_pass2.Text & "' where id_admin =" & lbl_id.Text
         comm = New SqlCommand(query, conn)
         comm.ExecuteNonQuery()
         comm.Dispose()

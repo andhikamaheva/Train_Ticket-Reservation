@@ -2,20 +2,14 @@
 Imports System.Data.SqlClient
 
 Public Class lihat_user
-    Dim connStr As String = "server=ROOT;database=K_API;integrated security = true; MultipleActiveResultSets=true"
-    Dim conn As New SqlConnection(connStr)
-    Dim comm As SqlCommand
-    Dim exec As SqlDataReader
-    Dim query As String
-    Dim adapter As SqlDataAdapter
-    Dim dt As DataTable
+
 
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
         dgv_hasil.Rows.Clear()
         conn.Open()
-        query = "select id as ID, nama as Nama, username as Username, hak_akses as [Hak Akses] from admin where username ='" & txt_cari.Text & "' or nama like '" & txt_cari.Text & "%'"
+        query = "select id_admin as ID, nama_admin as Nama, username as Username, hak_akses as [Hak Akses] from admin where username ='" & txt_cari.Text & "' or nama like '" & txt_cari.Text & "%'"
         comm = New SqlCommand(query, conn)
         exec = comm.ExecuteReader()
 
@@ -23,7 +17,7 @@ Public Class lihat_user
         dgv_hasil.Columns(0).Name = "ID"
         dgv_hasil.Columns(1).Name = "Nama"
         dgv_hasil.Columns(2).Name = "Username"
-        dgv_hasil.Columns(2).Name = "Hak AKses"
+        dgv_hasil.Columns(3).Name = "Hak AKses"
      
         While exec.Read
             dgv_hasil.Rows.Add(exec(0).ToString, exec(1).ToString, exec(2).ToString, exec(3).ToString)
@@ -53,8 +47,10 @@ Public Class lihat_user
 
     Private Sub lihat_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MdiParent = Menu_admin
+        Call koneksi()
+
         conn.Open()
-        query = "select id, nama, username, hak_akses from admin"
+        query = "select id_admin, nama_admin, username, hak_akses from admin"
         comm = New SqlCommand(query, conn)
         exec = comm.ExecuteReader()
 
@@ -91,7 +87,7 @@ Public Class lihat_user
         dgv_hasil.Rows.Clear()
         If Asc(e.KeyChar) = 13 Then
             conn.Open()
-            query = "select id, nama, username, hak_akses from admin where username ='" & txt_cari.Text & "' or nama like '" & txt_cari.Text & "%'"
+            query = "select id_admin, nama_admin, username, hak_akses from admin where username ='" & txt_cari.Text & "' or nama like '" & txt_cari.Text & "%'"
             comm = New SqlCommand(query, conn)
             exec = comm.ExecuteReader()
 
@@ -145,19 +141,17 @@ Public Class lihat_user
         Else
             If e.ColumnIndex = 5 Then
                 If MsgBox("Yakin akan menghapus ? ", MsgBoxStyle.OkCancel, "Hapus Data") = MsgBoxResult.Ok Then
-                    query = "delete admin where id = " & dgv_hasil.Item(0, dgv_hasil.CurrentRow.Index).Value.ToString()
+                    query = "delete admin where id_admin = " & dgv_hasil.Item(0, dgv_hasil.CurrentRow.Index).Value.ToString()
                     comm = New SqlCommand(query, conn)
                     comm.ExecuteNonQuery()
                     MsgBox("Data Berhasil dihapus!", MsgBoxStyle.OkOnly, "Succes")
+                    dgv_hasil.Rows.RemoveAt(dgv_hasil.CurrentRow.Index)
                 End If
             End If
         End If
         comm.Dispose()
         conn.Close()
     End Sub
-
- 
-
     Private Sub dgv_hasil_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_hasil.CellContentClick
 
     End Sub

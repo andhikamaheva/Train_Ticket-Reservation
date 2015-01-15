@@ -24,6 +24,8 @@
 
     Private Sub TambahUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles dp_tambah.Click
         tmbh_user.Show()
+
+
     End Sub
 
     Private Sub UbahPasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UbahPasswordToolStripMenuItem.Click
@@ -39,8 +41,6 @@
     End Sub
 
     Private Sub CariJadwalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CariJadwalToolStripMenuItem.Click
-        Cari_Jadwal.Show()
-
     End Sub
 
     Private Sub ManageJadwalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageJadwalToolStripMenuItem.Click
@@ -58,6 +58,53 @@
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Dispose()
+        Me.Close()
 
+    End Sub
+
+    Private Sub TambahKeretaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TambahKeretaToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub OpenOrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenOrderToolStripMenuItem.Click
+        Cari_Jadwal.Show()
+        'Data_Pemesan.Show()
+    End Sub
+
+    Private Sub CancelOrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CancelOrderToolStripMenuItem.Click
+        Cancel_order.Show()
+    End Sub
+
+    Private Sub KeretaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KeretaToolStripMenuItem.Click
+        Tambah_kereta.Show()
+    End Sub
+
+    Private Sub GerbongToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GerbongToolStripMenuItem.Click
+        Tambah_gerbong.Show()
+    End Sub
+
+    Private Sub ManageKeretaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageKeretaToolStripMenuItem.Click
+        manage_kereta.Show()
+    End Sub
+
+    Private Sub LihatJadwalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LihatJadwalToolStripMenuItem.Click
+        Manage_jadwal.Show()
+    End Sub
+
+    Private Sub TambahJadwalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TambahJadwalToolStripMenuItem.Click
+        Tambah_Jadwal.Show()
+    End Sub
+
+    Private Sub CariJadwalToolStripMenuItem1_Click(sender As Object, e As EventArgs)
+        Cari_Jadwal.Show()
+    End Sub
+
+    Private Sub KonfirmasiPembayaranToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KonfirmasiPembayaranToolStripMenuItem.Click
+        konfirmasi_pembayaran.Show()
+
+    End Sub
+
+    Private Sub TambahJurusanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TambahJurusanToolStripMenuItem.Click
+        Tambah_jurusan.Show()
     End Sub
 End Class

@@ -29,23 +29,27 @@ Partial Class Menu_admin
         Me.dp_manage = New System.Windows.Forms.ToolStripMenuItem()
         Me.UbahPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterKeretaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TambahKeretaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KeretaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GerbongToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageKeretaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageJadwalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TambahJadwalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LihatJadwalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TambahJurusanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TambahJadwalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CariJadwalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CancelOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KonfirmasiPembayaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VersionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.txt_log = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.KonfirmasiPembayaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CancelOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -90,6 +94,12 @@ Partial Class Menu_admin
         Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.LogOutToolStripMenuItem.Text = "Log Out"
         '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
         'MasterKeretaToolStripMenuItem
         '
         Me.MasterKeretaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahKeretaToolStripMenuItem, Me.ManageKeretaToolStripMenuItem})
@@ -99,34 +109,53 @@ Partial Class Menu_admin
         '
         'TambahKeretaToolStripMenuItem
         '
+        Me.TambahKeretaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KeretaToolStripMenuItem, Me.GerbongToolStripMenuItem})
         Me.TambahKeretaToolStripMenuItem.Name = "TambahKeretaToolStripMenuItem"
-        Me.TambahKeretaToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.TambahKeretaToolStripMenuItem.Text = "Tambah Kereta"
+        Me.TambahKeretaToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.TambahKeretaToolStripMenuItem.Text = "Tambah Data"
+        '
+        'KeretaToolStripMenuItem
+        '
+        Me.KeretaToolStripMenuItem.Name = "KeretaToolStripMenuItem"
+        Me.KeretaToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.KeretaToolStripMenuItem.Text = "Kereta"
+        '
+        'GerbongToolStripMenuItem
+        '
+        Me.GerbongToolStripMenuItem.Name = "GerbongToolStripMenuItem"
+        Me.GerbongToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.GerbongToolStripMenuItem.Text = "Gerbong"
         '
         'ManageKeretaToolStripMenuItem
         '
         Me.ManageKeretaToolStripMenuItem.Name = "ManageKeretaToolStripMenuItem"
-        Me.ManageKeretaToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.ManageKeretaToolStripMenuItem.Text = "Manage Kereta"
+        Me.ManageKeretaToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ManageKeretaToolStripMenuItem.Text = "Lihat Jadwal"
         '
         'ManageJadwalToolStripMenuItem
         '
-        Me.ManageJadwalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahJadwalToolStripMenuItem, Me.LihatJadwalToolStripMenuItem})
+        Me.ManageJadwalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahJurusanToolStripMenuItem, Me.TambahJadwalToolStripMenuItem, Me.LihatJadwalToolStripMenuItem})
         Me.ManageJadwalToolStripMenuItem.Name = "ManageJadwalToolStripMenuItem"
         Me.ManageJadwalToolStripMenuItem.Size = New System.Drawing.Size(93, 20)
         Me.ManageJadwalToolStripMenuItem.Text = "Master Jadwal"
         '
-        'TambahJadwalToolStripMenuItem
-        '
-        Me.TambahJadwalToolStripMenuItem.Name = "TambahJadwalToolStripMenuItem"
-        Me.TambahJadwalToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.TambahJadwalToolStripMenuItem.Text = "Tambah Jadwal"
-        '
         'LihatJadwalToolStripMenuItem
         '
         Me.LihatJadwalToolStripMenuItem.Name = "LihatJadwalToolStripMenuItem"
-        Me.LihatJadwalToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.LihatJadwalToolStripMenuItem.Text = "Manage Jadwal"
+        Me.LihatJadwalToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.LihatJadwalToolStripMenuItem.Text = "LIhat Jadwal"
+        '
+        'TambahJurusanToolStripMenuItem
+        '
+        Me.TambahJurusanToolStripMenuItem.Name = "TambahJurusanToolStripMenuItem"
+        Me.TambahJurusanToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.TambahJurusanToolStripMenuItem.Text = "Tambah Jurusan"
+        '
+        'TambahJadwalToolStripMenuItem
+        '
+        Me.TambahJadwalToolStripMenuItem.Name = "TambahJadwalToolStripMenuItem"
+        Me.TambahJadwalToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.TambahJadwalToolStripMenuItem.Text = "Tambah Jadwal"
         '
         'ManageOrderToolStripMenuItem
         '
@@ -142,6 +171,37 @@ Partial Class Menu_admin
         Me.CariJadwalToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.CariJadwalToolStripMenuItem.Text = "Booking"
         '
+        'OpenOrderToolStripMenuItem
+        '
+        Me.OpenOrderToolStripMenuItem.Name = "OpenOrderToolStripMenuItem"
+        Me.OpenOrderToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.OpenOrderToolStripMenuItem.Text = "Open Order"
+        '
+        'CancelOrderToolStripMenuItem
+        '
+        Me.CancelOrderToolStripMenuItem.Name = "CancelOrderToolStripMenuItem"
+        Me.CancelOrderToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.CancelOrderToolStripMenuItem.Text = "Cancel Order"
+        '
+        'KonfirmasiPembayaranToolStripMenuItem
+        '
+        Me.KonfirmasiPembayaranToolStripMenuItem.Name = "KonfirmasiPembayaranToolStripMenuItem"
+        Me.KonfirmasiPembayaranToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.KonfirmasiPembayaranToolStripMenuItem.Text = "Konfirmasi Pembayaran"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransaksiToolStripMenuItem})
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.ReportToolStripMenuItem.Text = "Report"
+        '
+        'TransaksiToolStripMenuItem
+        '
+        Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
+        Me.TransaksiToolStripMenuItem.Text = "Transaksi"
+        '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersionToolStripMenuItem})
@@ -152,7 +212,7 @@ Partial Class Menu_admin
         'VersionToolStripMenuItem
         '
         Me.VersionToolStripMenuItem.Name = "VersionToolStripMenuItem"
-        Me.VersionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VersionToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.VersionToolStripMenuItem.Text = "Version"
         '
         'StatusStrip1
@@ -169,36 +229,6 @@ Partial Class Menu_admin
         Me.txt_log.Name = "txt_log"
         Me.txt_log.Size = New System.Drawing.Size(60, 17)
         Me.txt_log.Text = "Login as : "
-        '
-        'KonfirmasiPembayaranToolStripMenuItem
-        '
-        Me.KonfirmasiPembayaranToolStripMenuItem.Name = "KonfirmasiPembayaranToolStripMenuItem"
-        Me.KonfirmasiPembayaranToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
-        Me.KonfirmasiPembayaranToolStripMenuItem.Text = "Konfirmasi Pembayaran"
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.ReportToolStripMenuItem.Text = "Report"
-        '
-        'OpenOrderToolStripMenuItem
-        '
-        Me.OpenOrderToolStripMenuItem.Name = "OpenOrderToolStripMenuItem"
-        Me.OpenOrderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.OpenOrderToolStripMenuItem.Text = "Open Order"
-        '
-        'CancelOrderToolStripMenuItem
-        '
-        Me.CancelOrderToolStripMenuItem.Name = "CancelOrderToolStripMenuItem"
-        Me.CancelOrderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CancelOrderToolStripMenuItem.Text = "Cancel Order"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'Menu_admin
         '
@@ -248,4 +278,8 @@ Partial Class Menu_admin
     Friend WithEvents KonfirmasiPembayaranToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents KeretaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GerbongToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TambahJurusanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

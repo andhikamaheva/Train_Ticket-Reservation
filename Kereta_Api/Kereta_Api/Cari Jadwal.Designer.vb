@@ -22,152 +22,135 @@ Partial Class Cari_Jadwal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.dateDatang = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cboStasiun = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_hasil = New System.Windows.Forms.DataGridView()
+        Me.KAIDataSet1 = New Kereta_Api.KAIDataSet1()
+        Me.STASIUNBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.STASIUNTableAdapter = New Kereta_Api.KAIDataSet1TableAdapters.STASIUNTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_hasil, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KAIDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.STASIUNBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.dateDatang)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.cboStasiun)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 29)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(554, 171)
+        Me.GroupBox1.Size = New System.Drawing.Size(554, 178)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(231, 121)
+        Me.Button1.Location = New System.Drawing.Point(228, 126)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(81, 38)
+        Me.Button1.Size = New System.Drawing.Size(81, 27)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Cari"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'ComboBox4
+        'dateDatang
         '
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(381, 79)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 7
+        Me.dateDatang.AllowDrop = True
+        Me.dateDatang.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.dateDatang.CustomFormat = ""
+        Me.dateDatang.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dateDatang.Location = New System.Drawing.Point(276, 82)
+        Me.dateDatang.Name = "dateDatang"
+        Me.dateDatang.Size = New System.Drawing.Size(113, 20)
+        Me.dateDatang.TabIndex = 9
+        Me.dateDatang.Value = New Date(2015, 1, 11, 16, 35, 3, 0)
         '
-        'ComboBox3
+        'Label5
         '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(123, 76)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 6
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(152, 82)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(98, 13)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Tanggal Berangkat"
         '
-        'ComboBox2
+        'cboStasiun
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(381, 17)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 5
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(123, 20)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 4
+        Me.cboStasiun.DataSource = Me.STASIUNBindingSource
+        Me.cboStasiun.DisplayMember = "ID_STASIUN"
+        Me.cboStasiun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboStasiun.FormattingEnabled = True
+        Me.cboStasiun.Location = New System.Drawing.Point(270, 32)
+        Me.cboStasiun.Name = "cboStasiun"
+        Me.cboStasiun.Size = New System.Drawing.Size(121, 21)
+        Me.cboStasiun.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(291, 79)
+        Me.Label4.Location = New System.Drawing.Point(182, 35)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 13)
+        Me.Label4.Size = New System.Drawing.Size(56, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Stasiun Tujuan :"
+        Me.Label4.Text = "ID Stasiun"
         '
-        'Label3
+        'dgv_hasil
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(46, 79)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Kota Tujuan :"
+        Me.dgv_hasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_hasil.Location = New System.Drawing.Point(12, 224)
+        Me.dgv_hasil.Name = "dgv_hasil"
+        Me.dgv_hasil.Size = New System.Drawing.Size(554, 209)
+        Me.dgv_hasil.TabIndex = 1
         '
-        'Label2
+        'KAIDataSet1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(291, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Stasiun Asal :"
+        Me.KAIDataSet1.DataSetName = "KAIDataSet1"
+        Me.KAIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label1
+        'STASIUNBindingSource
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Kota Asal :"
+        Me.STASIUNBindingSource.DataMember = "STASIUN"
+        Me.STASIUNBindingSource.DataSource = Me.KAIDataSet1
         '
-        'DataGridView1
+        'STASIUNTableAdapter
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 237)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(554, 196)
-        Me.DataGridView1.TabIndex = 1
+        Me.STASIUNTableAdapter.ClearBeforeFill = True
         '
         'Cari_Jadwal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 462)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgv_hasil)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MinimizeBox = False
         Me.Name = "Cari_Jadwal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cari Jadwal"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_hasil, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KAIDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.STASIUNBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboStasiun As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgv_hasil As System.Windows.Forms.DataGridView
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents dateDatang As System.Windows.Forms.DateTimePicker
+    Friend WithEvents KAIDataSet1 As Kereta_Api.KAIDataSet1
+    Friend WithEvents STASIUNBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents STASIUNTableAdapter As Kereta_Api.KAIDataSet1TableAdapters.STASIUNTableAdapter
 End Class

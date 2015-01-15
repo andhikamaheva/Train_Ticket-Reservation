@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\vilian18\Desktop\MATERI KULIAH\SEMESTER 3\PBD\UAS\</PublishUrl>
+    <PublishUrl>C:\Users\vilian18\Desktop\MATERI KULIAH\SEMESTER 3\PBD\UAS\tes\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -80,6 +80,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -101,6 +104,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cancel_order.Designer.vb">
+      <DependentUpon>Cancel_order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cancel_order.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cari Jadwal.Designer.vb">
       <DependentUpon>Cari Jadwal.vb</DependentUpon>
     </Compile>
@@ -113,16 +122,68 @@
     <Compile Include="Data Pemesan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data Penumpang.Designer.vb">
-      <DependentUpon>Data Penumpang.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Data Penumpang.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KAIDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KAIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KAIDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KAIDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="konfirmasi_pembayaran.Designer.vb">
+      <DependentUpon>konfirmasi_pembayaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="konfirmasi_pembayaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_jadwal.Designer.vb">
+      <DependentUpon>Manage_jadwal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_jadwal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_kereta.Designer.vb">
+      <DependentUpon>manage_kereta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_kereta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="PBDDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pembayaran.Designer.vb">
+      <DependentUpon>Pembayaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembayaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah Jadwal.Designer.vb">
+      <DependentUpon>Tambah Jadwal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah Jadwal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah_gerbong.Designer.vb">
+      <DependentUpon>Tambah_gerbong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah_gerbong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah_jurusan.Designer.vb">
+      <DependentUpon>Tambah_jurusan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah_jurusan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tambah_kereta.Designer.vb">
@@ -185,23 +246,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cancel_order.resx">
+      <DependentUpon>Cancel_order.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cari Jadwal.resx">
       <DependentUpon>Cari Jadwal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data Pemesan.resx">
       <DependentUpon>Data Pemesan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data Penumpang.resx">
-      <DependentUpon>Data Penumpang.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konfirmasi_pembayaran.resx">
+      <DependentUpon>konfirmasi_pembayaran.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lihat_user.resx">
       <DependentUpon>lihat_user.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_jadwal.resx">
+      <DependentUpon>Manage_jadwal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_kereta.resx">
+      <DependentUpon>manage_kereta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
@@ -211,6 +281,18 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembayaran.resx">
+      <DependentUpon>Pembayaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah Jadwal.resx">
+      <DependentUpon>Tambah Jadwal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah_gerbong.resx">
+      <DependentUpon>Tambah_gerbong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah_jurusan.resx">
+      <DependentUpon>Tambah_jurusan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tambah_kereta.resx">
       <DependentUpon>Tambah_kereta.vb</DependentUpon>
@@ -226,6 +308,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="KAIDataSet.xsc">
+      <DependentUpon>KAIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KAIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KAIDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KAIDataSet.xss">
+      <DependentUpon>KAIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KAIDataSet1.xsc">
+      <DependentUpon>KAIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KAIDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KAIDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KAIDataSet1.xss">
+      <DependentUpon>KAIDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Kereta_Api_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -237,6 +341,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="PBDDataSet.xsc">
+      <DependentUpon>PBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PBDDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PBDDataSet.xss">
+      <DependentUpon>PBDDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
